@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="fffffe"
+    tools:context="com.example.paula.login.UserView">
+
+
+
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#bb5b00"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#000000"
+        android:text="Wyloguj się" />
+
+
+    <TextView
+        android:id="@+id/textTitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Kino Wolność"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275"
+        android:layout_marginBottom="111dp"
+        android:layout_above="@+id/butRepertuar"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/butDojazd"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bb5b00"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Dojazd"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/butRepertuar"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bb5b00"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Repertuar"
+
+        android:textSize="20sp"
+        android:layout_above="@+id/butBilety"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp" />
+
+    <Button
+        android:id="@+id/butBilety"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bb5b00"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Moje Bilety"
+        android:textSize="20sp"
+        android:layout_above="@+id/butDojazd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp" />
+
+
+
+
+</RelativeLayout>

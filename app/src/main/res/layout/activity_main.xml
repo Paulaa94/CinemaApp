@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fffffe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.paula.login.LoginActivity">
+
+
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Użytkownik"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Hasło"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="79dp" />
+
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zaloguj się"
+        android:background="#bb5b00 "
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="146dp"
+
+        />
+
+
+    <Button
+        android:id="@+id/Brepertoire"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Repertuar"
+        android:background="#bb5b00"
+        tools:layout_editor_absoluteY="369dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/Baccess"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Dojazd"
+        android:background="#bb5b00"
+
+        tools:layout_editor_absoluteY="429dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="367dp"
+        android:layout_height="55dp"
+        android:text="SPRAWDŹ OFERTĘ KINA BEZ LOGOWANIA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteY="263dp"
+        tools:layout_editor_absoluteX="9dp" />
+
+
+</android.support.constraint.ConstraintLayout>
