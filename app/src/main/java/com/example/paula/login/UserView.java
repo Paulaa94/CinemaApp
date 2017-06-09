@@ -4,11 +4,28 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.junit.runner.Request;
 
 
 public class UserView extends AppCompatActivity {
+
+    Button Brepertoire;
+    TextView films;
+    RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +63,59 @@ public class UserView extends AppCompatActivity {
         bdojazd.setOnClickListener(l);
 
 
+        Brepertoire = (Button) findViewById(R.id.Brepertoire);
+        films = (TextView) findViewById(R.id.films);
+        requestQueue = Volley.newRequestQueue(this);
 
-    }
+        Brepertoire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "", // JSON URL data
 
 
-}
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                try {
+
+                                    JSONArray jsonArray = response.getJSONArray("Film");
+
+                                    for (int i = 0; i < jsonArray.length(); i++) {
+
+                                        JSONObject film = jsonArray.getJSONObject(i);
+
+                                        String title = film.getString("title");
+                                        String director = film.getString("director");
+                                        Integer showingStart = film.getInt("showingStart");
+                                        Integer showingEnd = film.getInt("showingEnd");
+                                        String description = film.getString("description");
+
+                                        films.append("Tytuł: " +title + "; " + "Reżyser: " + director + " \n " +
+                                                "Rozpoczęcie: " + showingStart + " \n " +
+                                                "Zakończenie: " + showingEnd + " \n " +
+                                                "Opis: " + description + " \n " + " \n ");
+                                    }
+                                }
+                                catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            },
+                                new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse (VolleyError error){
+
+                                Log.e("VOLLEY", "ERROR");
+                            }
+
+                            }
+
+
+                ); requestQueue.add(jsonObjectRequest);
+
+            };
+        });
+
+}}
