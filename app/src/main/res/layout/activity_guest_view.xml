@@ -7,21 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-    tools:context="com.example.paula.login.UserView">
+    tools:context="com.example.paula.login.GuestView">
 
 
     <Button
-        android:id="@+id/logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:background="#390001"
-        android:textColor="#fdc000"
-        android:text="Wyloguj"
-        android:layout_alignParentTop="true" />
-
-    <Button
-        android:id="@+id/Brepertoire"
+        android:id="@+id/Brepertuar"
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,24 +20,25 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="REPERTUAR"
         android:textSize="20sp"
-        android:layout_above="@+id/Bdojazd"
+        android:layout_above="@+id/Bmapa"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
     <Button
-        android:id="@+id/Btickets"
+        android:id="@+id/Bpowrot"
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#390001"
         android:textColor="#fdc000"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="BILETY"
+        android:text="Powrot na strone glowna"
         android:textSize="20sp"
-        android:layout_above="@+id/Brepertoire"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
     <Button
-        android:id="@+id/Bdojazd"
+        android:id="@+id/Bmapa"
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,24 +47,20 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Dojazd"
         android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true" />
 
     <TextView
-        android:id="@+id/wyswietlaczPobranychDanych"
+        android:id="@+id/wyswietlaczRepertuaru"
         android:textColor="#fff"
         android:background="#111"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:maxLines = "20"
         android:scrollbars = "vertical"
+        android:layout_above="@+id/Brepertuar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/Btickets"
-        android:layout_below="@+id/logout" />
-
-
+        android:layout_below="@+id/Bpowrot" />
 </RelativeLayout>
